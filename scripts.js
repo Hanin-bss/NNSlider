@@ -1,3 +1,12 @@
+/*
+ * NNSlider 0.1
+ * http://url.com
+ * This is a simple Gallery Slider, Biuld With jquery.
+ * Copyright 2015, Abdel Hanin
+ * Free to use and abuse under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+
 $(window).load(function(){   	
 		
 	$('.slider-content').after('<div class="paginator"><ul></ul></div>');
@@ -8,6 +17,7 @@ $(window).load(function(){
     		$('.paginator ul').append('<li><span data-index="'+index+'"></span></li>');
     	}
 	});
+	$('.paginator').after('<div class="controls"><span class="prev"></span><span class="next"></span></div>');
 
 	matchHeight();
 
@@ -22,12 +32,11 @@ $(window).load(function(){
 		$('.slider-wrapper').height(sliderHeight);			
 	}
 	
-
-
 	
 	$('.paginator span').click(function(){					
 		slideIndex = $(this).attr('data-index');		
 		changeSlide(slideIndex);		
+			
 	});
 	
 	
@@ -42,9 +51,9 @@ $(window).load(function(){
 		$('.paginator span').eq(indexSlide).addClass('active');
 
 	}
+
+
 	
-
-
 	//Returns the active Slide
 	function activeSlide(){
 		actualSlide = $('.slider-content > *:visible');
@@ -66,6 +75,7 @@ $(window).load(function(){
 		changeSlide(activeSlide()+1);
 	});
 
+	
 	function autoControl(){
 		autoSlider = setInterval(function(){
 		  changeSlide(activeSlide()+1);
@@ -84,7 +94,5 @@ $(window).load(function(){
 		autoControl();
 	});
 
-	
-			
 
 });

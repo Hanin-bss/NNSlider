@@ -24,11 +24,11 @@
 
 .slider-wrapper .slider-content > * {
 	position: absolute;
+	
 }
 
 .slider-wrapper .slider-content > *:first-child {
 	display: block;
-	
 	
 }	
 
