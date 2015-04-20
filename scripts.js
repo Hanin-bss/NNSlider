@@ -1,6 +1,7 @@
 /*
  * NNSlider 0.1
  * http://url.com
+ * Author: Abdel Hanin
  * This is a simple Gallery Slider, Biuld With jquery.
  * Copyright 2015, Abdel Hanin
  * Free to use and abuse under the MIT license.
